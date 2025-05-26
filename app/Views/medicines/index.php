@@ -2,12 +2,63 @@
 <html>
 <head>
     <title>All Medicines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 20px;
+            color: #333;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            margin-right: 8px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        tr:hover {
+            background-color: #f1f8ff;
+        }
+        .add-new {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease;
+        }
+        .add-new:hover {
+            background-color: #219150;
+        }
+    </style>
 </head>
 <body>
     <h2>Medicine Reminders</h2>
-    <a href="<?= site_url('medicine/create') ?>">➕ Add New Medicine</a><br><br>
+    <a href="<?= site_url('medicine/create') ?>" class="add-new">➕ Add New Medicine</a><br><br>
 
-    <table border="1" cellpadding="10">
+    <table>
         <thead>
             <tr>
                 <th>Medicine</th>
